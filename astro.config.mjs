@@ -1,17 +1,15 @@
 // @ts-check
-import { defineConfig } from "astro/config";
+import { defineConfig } from 'astro/config';
 
-import tailwindcss from "@tailwindcss/vite";
+import tailwindcss from '@tailwindcss/vite';
+
+const isProd = process.env.NODE_ENV === 'production';
 
 // https://astro.build/config
 export default defineConfig({
-  //Production
-  site: "https://salvadorvasqz.github.io",
-  base: "/api-fetch-hooks/",
-  //local
-  // site: undefined,
-  // base: "/",
+  site: isProd ? 'https://salvadorvasqz.github.io' : undefined,
+  base: isProd ? '/api-fetch-hooks-doc/' : '/',
   vite: {
-    plugins: [tailwindcss()],
-  },
+    plugins: [tailwindcss()]
+  }
 });
