@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@plugin '@tailwindcss/typography';
+
+@theme {
+  --color-primary: #1b1b1b;
+  --color-secondary: #22c55e;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  filter: blur(100px);
+  opacity: 0.4;
+}

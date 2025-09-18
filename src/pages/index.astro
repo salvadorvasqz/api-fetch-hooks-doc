@@ -1,16 +1,28 @@
 ---
+import "../styles/global.css";
 
+import { Content } from "./doc.md";
+import Layout from "../layouts/layout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+  <div
+    class="flex flex-col w-full items-center relative h-[80px] mb-[15px] sm:mb-[30px]"
+  >
+    <span
+      class="text-[2rem] md:text-[4rem] tracking-[5px] leading-[70px] uppercase font-bold absolute top-0 bg-gradient-to-t to-secondary/10 from-transparent bg-clip-text text-transparent"
+    >
+      api-fetch-hooks
+    </span>
+    <h1
+      class="text-[1.5rem] md:text-[2.5rem] text-secondary uppercase font-bold tracking-[5px] leading-[40px] mt-[35px]"
+    >
+      api-fetch-hooks
+    </h1>
+  </div>
+  <article
+    class="prose max-w-none dark:prose-invert prose-headings:my-[5px] prose-headings:text-secondary prose-p:text-[18px] prose-strong:text-secondary"
+  >
+    <Content />
+  </article>
+</Layout>

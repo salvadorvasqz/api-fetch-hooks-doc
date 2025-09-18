@@ -1,43 +1,66 @@
-# Astro Starter Kit: Minimal
 
-```sh
-npm create astro@latest -- --template minimal
+
+# Api Fetch Hooks
+
+![Website Preview](./public/api-fetch-hooks.png)
+
+<a href="https://salvadorvasqz.github.io/api-fetch-hooks-doc/" target="_blank">Live Website</a>
+
+## Overview
+
+This project is a demo built with <a href="https://astro.build/" target="_blank">Astro</a>, integrating React components and styled using <a href="https://tailwindcss.com/" target="_blank">Tailwind CSS</a>. It demonstrates a simple site structure with layouts, and static assets.
+
+## Project Structure
+
+```
+astro.config.mjs         # Astro configuration
+package.json             # Project dependencies and scripts
+tsconfig.json            # TypeScript configuration
+public/                  # Static assets (SVGs, videos)
+src/
+	layouts/               # Astro layouts
+		layout.astro
+	pages/                 # Site pages
+		404.astro
+		doc.md
+		index.astro
+	styles/                # Global styles
+		global.css
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Key Features
 
-## 🚀 Project Structure
+- **Astro Framework:** Fast static site generation with support for multiple frontend frameworks.
+- **Tailwind CSS:** Utility-first CSS for rapid UI development.
+- **Custom Layouts:** Shared layout (`layout.astro`) for consistent page structure.
+- **Static Assets:** SVGs and videos in `public/` for use in pages and components.
 
-Inside of your Astro project, you'll see the following folders and files:
+## Getting Started
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+1. **Install dependencies:**
+	 ```powershell
+	 npm install
+	 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+2. **Run the development server:**
+	 ```powershell
+	 npm run dev
+	 ```
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+3. **Build for production:**
+	 ```powershell
+	 npm run build
+	 ```
 
-Any static assets, like images, can be placed in the `public/` directory.
+4. **Preview the production build:**
+	 ```powershell
+	 npm run preview
+	 ```
 
-## 🧞 Commands
+## Usage
 
-All commands are run from the root of the project, from a terminal:
+- Add new pages in `src/pages/` using `.astro` or Markdown.
+- Create or updates components in `src/components/`.
+- Customize global styles in `src/styles/global.css`.
+- Update layout in `src/layouts/layout.astro`.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
