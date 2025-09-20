@@ -1,0 +1,35 @@
+---
+import { Icon } from "astro-icon/components";
+
+const npmPackage = "api-fetch-hooks";
+---
+
+<div
+  class="max-w-sm mx-auto mb-[10px] px-[10px] py-[5px] bg-secondary/5 border border-secondary rounded-lg shadow-md flex items-center gap-[10px]"
+>
+  <Icon name="mdi:npm" class="text-secondary w-[50px] h-[50px]" />
+  <div class="flex-1 text-center">
+    <p class="text-sm text-white">Total downloads</p>
+    <p id="total-downloads" class="text-xl font-bold text-secondary">...</p>
+  </div>
+  <a
+    href={`https://www.npmjs.com/package/${npmPackage}`}
+    target="_blank"
+    class="text-secondary hover:underline text-sm mx-[5px]"
+  >
+    View package
+  </a>
+</div>
+
+<script>
+  const packageName = "api-fetch-hooks";
+  const publishedYear = 2025;
+
+  const currentYear = new Date().getFullYear();
+  const response = await fetch(
+    `https://api.npmjs.org/downloads/point/${publishedYear}-01-01:${currentYear}-12-31/${packageName}`
+  );
+  const data = await response.json();
+  (document.getElementById("total-downloads") as HTMLElement).innerText =
+    `${data.downloads.toLocaleString()}`;
+</script>

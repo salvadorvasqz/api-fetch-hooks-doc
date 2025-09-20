@@ -3,6 +3,7 @@ import "../styles/global.css";
 
 import { Content } from "./doc.md";
 import Layout from "../layouts/layout.astro";
+import TotalDownloads from "../components/TotalDownloads.astro";
 ---
 
 <Layout>
@@ -20,6 +21,7 @@ import Layout from "../layouts/layout.astro";
       api-fetch-hooks
     </h1>
   </div>
+  <TotalDownloads />
   <article
     class="prose max-w-none dark:prose-invert prose-headings:my-[5px] prose-headings:text-secondary prose-p:text-[18px] prose-strong:text-secondary"
   >
